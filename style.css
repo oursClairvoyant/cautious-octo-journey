@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;700&display=swap');
+
+body {
+  margin: auto 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  font-family: 'Readex Pro', sans-serif;
+  background: #F5F6F7;
+  background: rgb(15, 32, 39);
+  background: linear-gradient(90deg, rgba(15, 32, 39, 1) 0%, rgba(32, 58, 67, 1) 35%, rgba(44, 83, 100, 1) 100%);
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  gap: 2rem;
+
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+nav {
+
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+
+
+  height: 50px;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+
+
+}
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+}
+
+li {
+  cursor: pointer;
+}
+footer {
+ 
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+ 
+
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+  
+
+
+  .nav-links {
+    gap: 3em;
+    position: fixed;
+    inset: 0 0 0 30%;
+    background: steelblue;
+    flex-direction: column;
+    padding: 10rem 2rem;
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(2rem);
+    transform: translateX(100%);
+
+
+
+
+
+
+
+  }
+  #close {
+    display: none;
+  }
+  .nav-links[data-visible="true"] {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-out;
+  }
+  .mobile-nav-toggle {
+    position: absolute;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+  }
+  /*on peut pas modif la src en 
+  .mobile-nav-toggle[aria-expanded = "true"]{
+    
+  }*/
+  
+  }
+
+
+
